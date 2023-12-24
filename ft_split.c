@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:42:18 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/12 15:02:06 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:11:14 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,15 +92,9 @@ static char	**norminite(char **result, const char *s, char c, int j)
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		i;
 	int		j;
-	int		start;
-	int		len;
 
-	i = 0;
 	j = 0;
-	len = 0;
-	start = 0;
 	if (!s)
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (wordcount(s, c) + 1));

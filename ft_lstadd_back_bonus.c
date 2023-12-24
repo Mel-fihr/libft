@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:31:04 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/29 22:52:57 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/05 12:30:31 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	else 
-	{
+	else
 		i->next = new;
-		new->next = NULL;
-	}
 }

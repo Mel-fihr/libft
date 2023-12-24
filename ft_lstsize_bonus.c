@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:35:21 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/29 16:13:06 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/01 06:36:10 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		i;
+	t_list	*l;
 
 	i = 0;
-	while (lst)
+	l = lst;
+	while (l)
 	{
-		lst = (*lst).next;
+		l = l->next;
 		i++;
 	}
 	return (i);

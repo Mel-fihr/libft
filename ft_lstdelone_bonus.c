@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 22:15:43 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/29 22:18:35 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:14:16 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	(*del)(lst->content);
+	if (!del)
+		return ;
+	del(lst->content);
 	free(lst);
 }

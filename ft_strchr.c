@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:19:23 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/02 13:51:56 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:10:29 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
-	char			cc;
+	int		i;
+	char	cc;
 
 	cc = (char)c;
 	i = 0;

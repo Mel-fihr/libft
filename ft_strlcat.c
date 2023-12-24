@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:56:29 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/03 14:53:20 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/08 09:26:00 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	res;
 
 	s_len = ft_strlen(src);
+	if (!dstsize)
+		return (s_len);
 	d_len = ft_strlen(dst);
 	res = s_len + d_len;
 	if (dstsize <= d_len)

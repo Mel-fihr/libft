@@ -6,7 +6,7 @@
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:44:29 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/11/07 15:46:16 by mel-fihr         ###   ########.fr       */
+/*   Updated: 2023/12/01 05:29:07 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	s11 = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	s11 = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s11)
 		return (NULL);
 	i = 0;

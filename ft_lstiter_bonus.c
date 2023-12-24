@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-fihr <mel-fihr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 13:53:06 by mel-fihr          #+#    #+#             */
-/*   Updated: 2023/12/08 09:17:38 by mel-fihr         ###   ########.fr       */
+/*   Created: 2023/12/01 06:27:52 by mel-fihr          #+#    #+#             */
+/*   Updated: 2023/12/01 06:41:37 by mel-fihr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*p;
+	t_list	*l;
 
-	p = (char *) s;
-	while (n > 0)
+	l = lst;
+	if (l && f)
 	{
-		*(p++) = 0;
-		n--;
+		while (l)
+		{
+			f(l->content);
+			l = l->next;
+		}
 	}
 }
